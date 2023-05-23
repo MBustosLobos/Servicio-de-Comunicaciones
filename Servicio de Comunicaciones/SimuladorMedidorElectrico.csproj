@@ -64,9 +64,9 @@
       <Project>{261B7958-9FB7-473A-BD10-DC50089619C8}</Project>
       <Name>MensajeroModel</Name>
     </ProjectReference>
-    <ProjectReference Include="..\ServidorSocketUtils\ServidorSocketUtils.csproj">
+    <ProjectReference Include="..\ServidorSocketUtils\ServicioDeComunicaciones.csproj">
       <Project>{AB91F697-3CD2-4A6B-84C7-36DCC41900C9}</Project>
-      <Name>ServidorSocketUtils</Name>
+      <Name>ServicioDeComunicaciones</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>

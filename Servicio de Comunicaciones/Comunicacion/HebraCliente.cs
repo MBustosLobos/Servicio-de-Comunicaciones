@@ -1,13 +1,13 @@
 ﻿using MensajeroModel.DAL;
 using MensajeroModel.DTO;
-using ServidorSocketUtils;
+using ServicioDeComunicaciones;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Mensajero.Comunicacion
+namespace SimuladorMedidorElectrico
 {
     
     public class HebraCliente

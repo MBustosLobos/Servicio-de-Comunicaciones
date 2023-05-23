@@ -1,6 +1,6 @@
 ﻿using MensajeroModel.DAL;
 using MensajeroModel.DTO;
-using ServidorSocketUtils;
+using ServicioDeComunicaciones;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -10,7 +10,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Mensajero.Comunicacion
+namespace SimuladorMedidorElectrico
 {
     public class HebraServidor
     {

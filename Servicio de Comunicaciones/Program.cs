@@ -1,7 +1,6 @@
-﻿using Mensajero.Comunicacion;
+﻿using ServicioDeComunicaciones;
 using MensajeroModel.DAL;
 using MensajeroModel.DTO;
-using ServidorSocketUtils;
 using System;
 using System.Collections.Generic;
 using System.Configuration;
@@ -10,7 +9,7 @@ using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
 
-namespace Servicio_de_Comunicaciones
+namespace SimuladorMedidorElectrico
 {
     public class Program
     {

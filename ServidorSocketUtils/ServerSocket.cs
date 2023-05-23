@@ -6,7 +6,8 @@ using System.Net.Sockets;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace ServidorSocketUtils
+namespace ServicioDeComunicaciones
+
 {
     public class ServerSocket
     {
