@@ -35,7 +35,7 @@ namespace MensajeroModel.DAL
             {
                 using(StreamWriter write = new StreamWriter(archivo, true))
                 {
-                    write.WriteLine(mensaje.NroMedidor +"|"+ mensaje.Fecha + "|" + mensaje.ValorConsumo +" kw/h");
+                    write.WriteLine(mensaje.NroMedidorInt +"|"+ mensaje.Fecha + "|" + mensaje.ValorConsumoFloat +" kw/h");
                     write.Flush();
                 }
             }
@@ -61,9 +61,9 @@ namespace MensajeroModel.DAL
                             string[] arr = texto.Trim().Split('|');
                             Mensaje mensaje = new Mensaje()
                             {
-                                NroMedidor = arr[0],
+                                NroMedidorString = arr[0],
                                 Fecha = arr[1],
-                                ValorConsumo = arr[2]
+                                ValorConsumoString = arr[2]
                             };
                             lista.Add(mensaje);
                         }

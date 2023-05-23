@@ -21,20 +21,26 @@ namespace SimuladorMedidorElectrico
 
         public void ejecutar()
         {
+          
             // traemos el codigo que atiende a los clientes
             clienteCom.Escribir("Ingrese numero de medidor: ");
-            string nroMedidor = clienteCom.Leer();
+           
+            string nroMedidorString = clienteCom.Leer();
+          
             //Tomamos la fecha del sistema
             string fecha = DateTime.Now.ToString("yyyy-MM-dd--HH:mm:ss");
+
             // solicitamos el consumo del medidor
             clienteCom.Escribir(" ¿Cual es el valor de consumo de su medidor? " +
                 "\nIngrese el valor en kilowats");
-            string valorConsumo = clienteCom.Leer();
+            //Leemos los datos de consumo
+            string valorConsumoString = clienteCom.Leer();
+
             Mensaje mensaje = new Mensaje()
             {
-                NroMedidor = nroMedidor,
+                NroMedidorInt = Int32.Parse(nroMedidorString),
                 Fecha = fecha,
-                ValorConsumo = valorConsumo
+                ValorConsumoFloat = float.Parse(valorConsumoString)
             };
             lock (mensajesDAL)
             { 

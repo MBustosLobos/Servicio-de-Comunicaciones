@@ -17,21 +17,19 @@ namespace SimuladorMedidorElectrico
         static bool Menu()
         {
             bool continuar = true;
-            Console.WriteLine("Selecciones una opcion");
-            Console.WriteLine(" 1. Ingresar \n 2. Mostrar \n 0.Salir");
+            Console.WriteLine("Seleccione una opcion");
+            Console.WriteLine(" 1 Mostrar datos de Medidores \n 0.Salir");
             switch (Console.ReadLine().Trim())
             {
+             
                 case "1":
-                    Ingresar();
-                    break;
-                case "2":
                     Mostrar();
                     break;
                 case "0":
-                    continuar = false;
+                    Environment.Exit(0);
                     break;
                 default:
-                    Console.WriteLine("Ingrese de Nuevo");
+                    Console.WriteLine("Por favor elija una opción...");
                     break;
             }
             return continuar;
@@ -45,33 +43,6 @@ namespace SimuladorMedidorElectrico
             while (Menu()) ;
         }
 
-        static void Ingresar()
-        {
-
-            
-            Console.WriteLine("Ingrese el número de su medidor: ");
-            string nroMedidor = Console.ReadLine().Trim();
-            
-         
-            string fecha = DateTime.Now.ToString("yyyy-MM-dd-HH-mm-ss");
-
-            Console.WriteLine(" ¿Cuál es el valor de consumo de su medidor? \n " +
-                "Ingrese el valor en kilowats");
-            string valorConsumo = Console.ReadLine().Trim();
-
-            
-            Mensaje mensaje = new Mensaje()
-            {
-
-                NroMedidor = nroMedidor,
-                Fecha = fecha,
-                ValorConsumo = valorConsumo
-            };
-            lock (mensajesDAL)
-            {
-                mensajesDAL.AgregarMensaje(mensaje);
-            }
-        }
 
         static void Mostrar()
         {
